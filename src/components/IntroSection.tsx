@@ -6,15 +6,15 @@ const IntroSection = () => {
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold leading-tight animate-slide-up">
-            Building the future, one line of code at a time
+            Construindo o futuro, uma linha de código por vez
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1">
-            As a Full Stack Developer, I bridge the gap between frontend elegance and backend robustness. 
-            With expertise spanning React, Angular, .NET, Spring Boot, and SQL databases, I craft end-to-end 
-            solutions that are both powerful and user-friendly.
+            Como Desenvolvedor Full Stack, eu conecto a elegância do frontend com a robustez do backend. 
+            Com expertise em React, Angular, .NET, Spring Boot e bancos SQL, crio soluções completas 
+            que são poderosas e fáceis de usar.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed animate-slide-up stagger-2 italic">
-            "Code is poetry written in logic, where each function tells a story of problem-solving."
+            "Código é poesia escrita em lógica, onde cada função conta uma história de resolução de problemas."
           </p>
           <div className="flex flex-wrap gap-3 pt-4">
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">React</span>

@@ -81,7 +81,7 @@ const ProjectCard = ({
               className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
-              View Project
+              Ver Projeto
             </a>
           )}
           {github && (
@@ -92,7 +92,7 @@ const ProjectCard = ({
               className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <Github className="w-4 h-4" />
-              Source Code
+              Código Fonte
             </a>
           )}
         </div>

@@ -47,16 +47,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
             <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Home
+              Início
             </a>
             <a href="/#projects" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Projects
+              Projetos
             </a>
             <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              About
+              Sobre
             </a>
             <a href="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Contact
+              Contato
             </a>
           </nav>
 
@@ -75,7 +75,7 @@ const Header = () => {
             </button>
             
             <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
-              Get in Touch
+              Entre em Contato
             </Button>
 
             {/* Mobile Menu Button */}
@@ -94,19 +94,19 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
               <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
-                Home
+                Início
               </a>
               <a href="/#projects" className="text-sm font-medium hover:text-accent transition-colors">
-                Projects
+                Projetos
               </a>
               <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
-                About
+                Sobre
               </a>
               <a href="/contact" className="text-sm font-medium hover:text-accent transition-colors">
-                Contact
+                Contato
               </a>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
-                Get in Touch
+                Entre em Contato
               </Button>
             </nav>
           </div>

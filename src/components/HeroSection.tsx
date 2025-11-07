@@ -24,15 +24,15 @@ const HeroSection = () => {
                 Guilherme Serafim
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Software Engineer
+                Engenheiro de Software
               </p>
             </div>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl animate-slide-up stagger-1 italic">
-              "Exploring minds and galaxies through code"
+              "Explorando mentes e galáxias através do código"
             </p>
             <p className="text-foreground text-base md:text-lg leading-relaxed max-w-xl animate-slide-up stagger-2">
-              Full Stack Developer specializing in React, Angular, .NET, and Spring Boot. 
-              Passionate about building scalable solutions and exploring the intersection of technology and human potential.
+              Desenvolvedor Full Stack especializado em React, Angular, .NET e Spring Boot. 
+              Apaixonado por construir soluções escaláveis e explorar a interseção entre tecnologia e potencial humano.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
               href="/#projects"
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-4 md:px-10 md:py-6 text-base font-medium transition-all hover:scale-105 w-full sm:w-auto text-center inline-block"
             >
-              View Projects
+              Ver Projetos
             </a>
 
             <div className="flex items-center gap-4">

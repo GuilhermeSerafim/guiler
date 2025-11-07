@@ -22,7 +22,7 @@ const Index = () => {
         <section className="py-12 max-w-4xl mx-auto">
           <div className="rounded-[2.5rem] bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-8 md:p-12 text-center animate-scale-in border border-border/50">
             <blockquote className="text-2xl md:text-3xl font-serif italic text-foreground leading-relaxed">
-              "{inspirationalQuotes[2]}"
+              "A inovação acontece na interseção entre curiosidade e persistência."
             </blockquote>
           </div>
         </section>
@@ -30,9 +30,9 @@ const Index = () => {
         {/* Featured Projects Grid */}
         <section id="projects" className="py-12">
           <div className="flex items-center justify-between mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Projetos em Destaque</h2>
             <span className="text-sm font-medium text-muted-foreground px-4 py-2 rounded-full bg-muted/60">
-              {projects.length} Projects
+              {projects.length} Projetos
             </span>
           </div>
 
@@ -49,22 +49,22 @@ const Index = () => {
         <section className="my-20 rounded-[2.5rem] bg-card p-8 md:p-12 animate-scale-in border border-border/50">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Philosophy & Expertise</h2>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Filosofia & Expertise</h2>
               <p className="text-lg text-muted-foreground leading-relaxed italic">
-                "Exploring minds and galaxies through code"
+                "Explorando mentes e galáxias através do código"
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Full Stack mastery: Frontend (React, Angular) + Backend (.NET, Spring Boot)</p>
+                  <p className="text-foreground">Domínio Full Stack: Frontend (React, Angular) + Backend (.NET, Spring Boot)</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Building scalable, maintainable solutions with clean architecture principles</p>
+                  <p className="text-foreground">Construindo soluções escaláveis e sustentáveis com princípios de arquitetura limpa</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Passionate about creating technology that bridges human potential and innovation</p>
+                  <p className="text-foreground">Apaixonado por criar tecnologia que conecta potencial humano e inovação</p>
                 </div>
               </div>
             </div>
@@ -83,9 +83,9 @@ const Index = () => {
         {/* Contact CTA Section */}
         <section className="my-20 rounded-[2.5rem] bg-gradient-to-br from-primary to-primary/80 p-12 md:p-16 text-center animate-scale-in">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary-foreground">Let's build something amazing together</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary-foreground">Vamos construir algo incrível juntos</h2>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Ready to collaborate? Let's connect and turn ideas into reality.
+              Pronto para colaborar? Vamos nos conectar e transformar ideias em realidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
               <a 
@@ -94,7 +94,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="px-10 py-4 rounded-full bg-background text-foreground font-medium hover:bg-background/90 hover:scale-105 transition-all"
               >
-                WhatsApp Me
+                WhatsApp
               </a>
               <a 
                 href="https://www.linkedin.com/in/guilherme-da-silva-serafim/"
@@ -114,23 +114,23 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-semibold mb-4">Navigation</h3>
+              <h3 className="font-semibold mb-4">Navegação</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
-                <li><a href="/#projects" className="hover:text-accent transition-colors">Projects</a></li>
-                <li><a href="/about" className="hover:text-accent transition-colors">About</a></li>
-                <li><a href="/contact" className="hover:text-accent transition-colors">Contact</a></li>
+                <li><a href="/" className="hover:text-accent transition-colors">Início</a></li>
+                <li><a href="/#projects" className="hover:text-accent transition-colors">Projetos</a></li>
+                <li><a href="/about" className="hover:text-accent transition-colors">Sobre</a></li>
+                <li><a href="/contact" className="hover:text-accent transition-colors">Contato</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Projects</h3>
+              <h3 className="font-semibold mb-4">Projetos</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="#georisk" className="hover:text-accent transition-colors">GeoRisk</a></li>
                 <li><a href="#play-senac" className="hover:text-accent transition-colors">Play Senac</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Connect</h3>
+              <h3 className="font-semibold mb-4">Conecte-se</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><a href="https://github.com/GuilhermeSerafim" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/guilherme-da-silva-serafim/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
@@ -143,13 +143,13 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-accent transition-colors">Terms of Service</a></li>
+                <li><a href="/privacy" className="hover:text-accent transition-colors">Política de Privacidade</a></li>
+                <li><a href="/terms" className="hover:text-accent transition-colors">Termos de Serviço</a></li>
               </ul>
             </div>
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 Guilherme Serafim • Software Engineer exploring minds and galaxies</p>
+            <p>© 2025 Guilherme Serafim • Engenheiro de Software explorando mentes e galáxias</p>
           </div>
         </div>
       </footer>
