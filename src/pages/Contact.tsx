@@ -14,7 +14,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
+    toast.success("Mensagem enviada! Retornarei em breve.");
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -33,21 +33,21 @@ const Contact = () => {
         {/* Hero Section */}
         <div className="mb-16 text-center space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-slide-down">
-            Get in Touch
+            Entre em Contato
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up stagger-1">
-            Have a question, suggestion, or just want to say hello? We'd love to hear from you.
+            Tem uma pergunta, sugestão ou apenas quer dizer olá? Adoraria ouvir você.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="rounded-2xl bg-card p-8">
-            <h2 className="text-2xl font-bold mb-6">Send us a message</h2>
+            <h2 className="text-2xl font-bold mb-6">Envie uma mensagem</h2>
         <form onSubmit={handleSubmit} className="space-y-6 animate-slide-up stagger-2">
           <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
+                  Nome
                 </label>
                 <input
                   type="text"
@@ -57,7 +57,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="Your name"
+                  placeholder="Seu nome"
                 />
               </div>
               <div>
@@ -72,12 +72,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="your.email@example.com"
+                  placeholder="seu.email@exemplo.com"
                 />
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Subject
+                  Assunto
                 </label>
                 <input
                   type="text"
@@ -87,12 +87,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="What's this about?"
+                  placeholder="Sobre o que é isso?"
                 />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  Mensagem
                 </label>
                 <textarea
                   id="message"
@@ -102,14 +102,14 @@ const Contact = () => {
                   required
                   rows={6}
                   className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                  placeholder="Tell us what's on your mind..."
+                  placeholder="Me conte o que você está pensando..."
                 />
               </div>
               <Button 
                 type="submit"
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-6"
               >
-                Send Message
+                Enviar Mensagem
               </Button>
             </form>
           </div>
@@ -117,7 +117,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="rounded-2xl bg-card p-8">
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-6">Informações de Contato</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
@@ -125,8 +125,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">hello@perspective.blog</p>
-                    <p className="text-muted-foreground text-sm">We'll respond within 24 hours</p>
+                    <p className="text-muted-foreground">guilerstudies@gmail.com</p>
+                    <p className="text-muted-foreground text-sm">Respondo em até 24 horas</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -134,9 +134,9 @@ const Contact = () => {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
-                    <p className="text-muted-foreground text-sm">Remote-first team</p>
+                    <h3 className="font-semibold mb-1">Localização</h3>
+                    <p className="text-muted-foreground">São Paulo, SP</p>
+                    <p className="text-muted-foreground text-sm">Disponível para trabalho remoto</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -144,33 +144,33 @@ const Contact = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-muted-foreground text-sm">Mon-Fri, 9am-5pm PST</p>
+                    <h3 className="font-semibold mb-1">Telefone</h3>
+                    <p className="text-muted-foreground">(11) 97034-9947</p>
+                    <p className="text-muted-foreground text-sm">Seg-Sex, 9h às 18h</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="rounded-2xl bg-muted p-8">
-              <h3 className="text-xl font-bold mb-4">Frequently Asked Questions</h3>
+              <h3 className="text-xl font-bold mb-4">Perguntas Frequentes</h3>
               <div className="space-y-4 text-sm">
                 <div>
-                  <h4 className="font-semibold mb-1">Can I contribute to Perspective?</h4>
+                  <h4 className="font-semibold mb-1">Como posso iniciar um projeto com você?</h4>
                   <p className="text-muted-foreground">
-                    Yes! We welcome guest contributions. Please use the form to submit your pitch or article idea.
+                    É simples! Basta entrar em contato através do formulário ou WhatsApp descrevendo sua ideia ou necessidade.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">How do I advertise with you?</h4>
+                  <h4 className="font-semibold mb-1">Quais tecnologias você trabalha?</h4>
                   <p className="text-muted-foreground">
-                    For advertising inquiries, email partnerships@perspective.blog with details about your brand.
+                    Trabalho com desenvolvimento Full Stack usando React, Angular, .NET e Spring Boot, além de outras tecnologias modernas.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">Can I republish your content?</h4>
+                  <h4 className="font-semibold mb-1">Você oferece suporte após a entrega?</h4>
                   <p className="text-muted-foreground">
-                    Please contact us for permissions and licensing. We're generally open to republishing with proper attribution.
+                    Sim! Ofereço suporte técnico e manutenção após a conclusão do projeto, garantindo que tudo continue funcionando perfeitamente.
                   </p>
                 </div>
               </div>
