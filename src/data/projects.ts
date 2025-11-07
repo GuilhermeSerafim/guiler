@@ -20,6 +20,7 @@ export const projects: Project[] = [
     description: "An innovative platform leveraging artificial intelligence and geospatial data to assess and visualize environmental risks. GeoRisk combines machine learning algorithms with geographic information systems to provide real-time risk analysis for natural disasters, climate change impacts, and environmental hazards.",
     technologies: ["Python", "TensorFlow", "GIS", "React", "FastAPI", "PostgreSQL"],
     link: "#",
+    github: "https://github.com/GuilhermeSerafim",
   },
   {
     id: "play-senac",
@@ -28,8 +29,9 @@ export const projects: Project[] = [
     date: "2024",
     image: "/placeholder.svg",
     description: "A modern e-learning platform designed to revolutionize digital education at Senac. Features interactive courses, real-time collaboration, gamification elements, and adaptive learning paths. Built with scalability and user experience as core principles, serving thousands of students.",
-    technologies: ["React", "Node.js", "MongoDB", "WebSocket", "AWS", "TypeScript"],
+    technologies: ["React", "Angular", ".NET", "Spring Boot", "SQL", "Node.js"],
     link: "#",
+    github: "https://github.com/GuilhermeSerafim",
   },
 ];
 

@@ -9,13 +9,20 @@ const IntroSection = () => {
             Building the future, one line of code at a time
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1">
-            As a developer and innovator, I transform complex challenges into elegant solutions. 
-            My journey spans AI-powered applications, educational platforms, and geospatial analysis—all 
-            driven by a passion for technology that serves humanity.
+            As a Full Stack Developer, I bridge the gap between frontend elegance and backend robustness. 
+            With expertise spanning React, Angular, .NET, Spring Boot, and SQL databases, I craft end-to-end 
+            solutions that are both powerful and user-friendly.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed animate-slide-up stagger-2 italic">
             "Code is poetry written in logic, where each function tells a story of problem-solving."
           </p>
+          <div className="flex flex-wrap gap-3 pt-4">
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">React</span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">Angular</span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">.NET</span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">Spring Boot</span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">SQL</span>
+          </div>
         </div>
         
         <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden animate-scale-in">

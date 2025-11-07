@@ -49,22 +49,22 @@ const Index = () => {
         <section className="my-20 rounded-[2.5rem] bg-card p-8 md:p-12 animate-scale-in border border-border/50">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Philosophy & Approach</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                "Every project is a journey of discovery, revealing not just technical solutions but also personal growth."
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Philosophy & Expertise</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed italic">
+                "Exploring minds and galaxies through code"
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Innovation at the intersection of AI, data, and user experience</p>
+                  <p className="text-foreground">Full Stack mastery: Frontend (React, Angular) + Backend (.NET, Spring Boot)</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Committed to creating technology that serves human needs</p>
+                  <p className="text-foreground">Building scalable, maintainable solutions with clean architecture principles</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <p className="text-foreground">Continuous learning and adaptation in an evolving tech landscape</p>
+                  <p className="text-foreground">Passionate about creating technology that bridges human potential and innovation</p>
                 </div>
               </div>
             </div>
@@ -83,22 +83,26 @@ const Index = () => {
         {/* Contact CTA Section */}
         <section className="my-20 rounded-[2.5rem] bg-gradient-to-br from-primary to-primary/80 p-12 md:p-16 text-center animate-scale-in">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary-foreground">Let's build something amazing</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary-foreground">Let's build something amazing together</h2>
             <p className="text-xl text-primary-foreground/90 leading-relaxed">
-              Ready to collaborate on your next project? Let's turn your ideas into reality.
+              Ready to collaborate? Let's connect and turn ideas into reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
               <a 
-                href="/contact"
+                href="https://api.whatsapp.com/send?phone=5511970349947"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-4 rounded-full bg-background text-foreground font-medium hover:bg-background/90 hover:scale-105 transition-all"
               >
-                Get in Touch
+                WhatsApp Me
               </a>
               <a 
-                href="/#projects"
+                href="https://www.linkedin.com/in/guilherme-da-silva-serafim/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-10 py-4 rounded-full border-2 border-primary-foreground text-primary-foreground font-medium hover:bg-primary-foreground/10 hover:scale-105 transition-all"
               >
-                View All Projects
+                LinkedIn
               </a>
             </div>
           </div>
@@ -128,9 +132,12 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Connect</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="https://github.com" className="hover:text-accent transition-colors">GitHub</a></li>
-                <li><a href="https://linkedin.com" className="hover:text-accent transition-colors">LinkedIn</a></li>
-                <li><a href="mailto:contact@example.com" className="hover:text-accent transition-colors">Email</a></li>
+                <li><a href="https://github.com/GuilhermeSerafim" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/guilherme-da-silva-serafim/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
+                <li><a href="https://instagram.com/iamguiler" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
+                <li><a href="https://x.com/guilerdev" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">X (Twitter)</a></li>
+                <li><a href="https://www.youtube.com/@iamguiler" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5511970349947" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
               </ul>
             </div>
             <div>
@@ -142,7 +149,7 @@ const Index = () => {
             </div>
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 Developer Portfolio. Built with passion and purpose.</p>
+            <p>© 2025 Guilherme Serafim • Software Engineer exploring minds and galaxies</p>
           </div>
         </div>
       </footer>

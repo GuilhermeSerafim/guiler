@@ -19,26 +19,34 @@ const HeroSection = () => {
         {/* Right side - Content */}
         <div className="flex flex-col justify-center space-y-6 md:space-y-8">
           <div className="space-y-4 md:space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight animate-slide-down">
-              Developer & Innovator
-            </h1>
+            <div className="space-y-2">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight animate-slide-down">
+                Guilherme Serafim
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                Software Engineer
+              </p>
+            </div>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl animate-slide-up stagger-1 italic">
-              "In every challenge, I see an opportunity for learning, like an astronomer faced with a cosmic mystery."
+              "Exploring minds and galaxies through code"
             </p>
             <p className="text-foreground text-base md:text-lg leading-relaxed max-w-xl animate-slide-up stagger-2">
-              Transforming ideas into impactful digital solutions. Specialized in AI, full-stack development, 
-              and creating technologies that make a difference.
+              Full Stack Developer specializing in React, Angular, .NET, and Spring Boot. 
+              Passionate about building scalable solutions and exploring the intersection of technology and human potential.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6 pt-4 animate-slide-up stagger-3">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-4 md:px-10 md:py-6 text-base font-medium transition-all hover:scale-105 w-full sm:w-auto">
+            <a 
+              href="/#projects"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-4 md:px-10 md:py-6 text-base font-medium transition-all hover:scale-105 w-full sm:w-auto text-center inline-block"
+            >
               View Projects
-            </Button>
+            </a>
 
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/GuilhermeSerafim"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
@@ -47,7 +55,7 @@ const HeroSection = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/guilherme-da-silva-serafim/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
@@ -56,9 +64,11 @@ const HeroSection = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="https://api.whatsapp.com/send?phone=5511970349947"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-border hover:border-primary hover:bg-muted transition-all flex items-center justify-center hover:scale-110"
-                aria-label="Email"
+                aria-label="WhatsApp"
               >
                 <Mail className="w-5 h-5" />
               </a>
