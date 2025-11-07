@@ -12,10 +12,45 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Replace YOUR_FORM_ID with your actual Formspree form ID (e.g. https://formspree.io/f/mnqwyzab)
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xanawnny";
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Mensagem enviada! Retornarei em breve.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setSubmitting(true);
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Formspree returns 200/202 for success; check res.ok
+      if (res.ok) {
+        toast.success("Mensagem enviada! Retornarei em breve.");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        // Try to read JSON error (optional)
+        let errorBody = null;
+        try {
+          errorBody = await res.json();
+        } catch (err) {
+          // ignore
+        }
+        console.error("Formspree error:", errorBody || res.statusText);
+        toast.error("Falha ao enviar. Tente novamente mais tarde.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Erro ao enviar mensagem. Verifique sua conexão.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
