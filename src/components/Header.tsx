@@ -38,9 +38,9 @@ const Header = () => {
           <div className="flex items-center min-w-0">
             <a href="/" className="flex items-center gap-1.5 sm:gap-2">
               <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-primary-foreground font-bold text-base sm:text-lg">P</span>
+                <span className="text-primary-foreground font-bold text-base sm:text-lg">{"</>"}</span>
               </div>
-              <span className="text-base sm:text-xl font-bold font-serif truncate">Perspective</span>
+              <span className="text-base sm:text-xl font-bold font-serif truncate">Portfolio</span>
             </a>
           </div>
 
@@ -49,17 +49,14 @@ const Header = () => {
             <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Home
             </a>
-            <a href="/#articles" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Articles
-            </a>
-            <a href="/wellness" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Wellness
-            </a>
-            <a href="/travel" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Travel
+            <a href="/#projects" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+              Projects
             </a>
             <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               About
+            </a>
+            <a href="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+              Contact
             </a>
           </nav>
 
@@ -78,7 +75,7 @@ const Header = () => {
             </button>
             
             <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
-              Join Now
+              Get in Touch
             </Button>
 
             {/* Mobile Menu Button */}
@@ -99,20 +96,17 @@ const Header = () => {
               <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
                 Home
               </a>
-              <a href="/#articles" className="text-sm font-medium hover:text-accent transition-colors">
-                Articles
-              </a>
-              <a href="/wellness" className="text-sm font-medium hover:text-accent transition-colors">
-                Wellness
-              </a>
-              <a href="/travel" className="text-sm font-medium hover:text-accent transition-colors">
-                Travel
+              <a href="/#projects" className="text-sm font-medium hover:text-accent transition-colors">
+                Projects
               </a>
               <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
                 About
               </a>
+              <a href="/contact" className="text-sm font-medium hover:text-accent transition-colors">
+                Contact
+              </a>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
-                Join Now
+                Get in Touch
               </Button>
             </nav>
           </div>

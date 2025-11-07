@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
-import ArticleCard from "@/components/ArticleCard";
+import ProjectCard from "@/components/ProjectCard";
 import HeroSection from "@/components/HeroSection";
 import IntroSection from "@/components/IntroSection";
-import { articles } from "@/data/articles";
+import { projects, inspirationalQuotes } from "@/data/projects";
+import profileSpeaking from "@/assets/profile-speaking.jpg";
+import profileSide from "@/assets/profile-side.jpg";
 
 const Index = () => {
-  const featuredArticles = articles.slice(0, 6);
-
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <Header />
@@ -18,40 +18,88 @@ const Index = () => {
         {/* Intro Section */}
         <IntroSection />
 
-        {/* Featured Articles Grid */}
-        <section id="articles" className="py-12">
+        {/* Inspirational Quote Section */}
+        <section className="py-12 max-w-4xl mx-auto">
+          <div className="rounded-[2.5rem] bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 p-8 md:p-12 text-center animate-scale-in border border-border/50">
+            <blockquote className="text-2xl md:text-3xl font-serif italic text-foreground leading-relaxed">
+              "{inspirationalQuotes[2]}"
+            </blockquote>
+          </div>
+        </section>
+
+        {/* Featured Projects Grid */}
+        <section id="projects" className="py-12">
           <div className="flex items-center justify-between mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Articles</h2>
-            <a href="#all" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors px-4 py-2 rounded-full hover:bg-muted/60">
-              View all →
-            </a>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Projects</h2>
+            <span className="text-sm font-medium text-muted-foreground px-4 py-2 rounded-full bg-muted/60">
+              {projects.length} Projects
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.map((article, index) => (
-              <div key={article.id} className={`animate-slide-up stagger-${Math.min(index + 1, 6)}`}>
-                <ArticleCard {...article} size="small" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <div key={project.id} className={`animate-slide-up stagger-${index + 1}`}>
+                <ProjectCard {...project} />
               </div>
             ))}
           </div>
         </section>
 
-        {/* Newsletter Section */}
-        <section className="my-20 rounded-[2.5rem] bg-card p-12 md:p-16 text-center animate-scale-in">
+        {/* Skills & Philosophy Section */}
+        <section className="my-20 rounded-[2.5rem] bg-card p-8 md:p-12 animate-scale-in border border-border/50">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Philosophy & Approach</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                "Every project is a journey of discovery, revealing not just technical solutions but also personal growth."
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-foreground">Innovation at the intersection of AI, data, and user experience</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-foreground">Committed to creating technology that serves human needs</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                  <p className="text-foreground">Continuous learning and adaptation in an evolving tech landscape</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative aspect-square rounded-[2rem] overflow-hidden">
+                <img src={profileSpeaking} alt="Speaking" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative aspect-square rounded-[2rem] overflow-hidden mt-8">
+                <img src={profileSide} alt="Profile" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact CTA Section */}
+        <section className="my-20 rounded-[2.5rem] bg-gradient-to-br from-primary to-primary/80 p-12 md:p-16 text-center animate-scale-in">
           <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Stay inspired.</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Subscribe to receive our latest articles and insights directly in your inbox.
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary-foreground">Let's build something amazing</h2>
+            <p className="text-xl text-primary-foreground/90 leading-relaxed">
+              Ready to collaborate on your next project? Let's turn your ideas into reality.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-6 py-4 rounded-full border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-              />
-              <button className="px-10 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 hover:scale-105 transition-all">
-                Subscribe
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
+              <a 
+                href="/contact"
+                className="px-10 py-4 rounded-full bg-background text-foreground font-medium hover:bg-background/90 hover:scale-105 transition-all"
+              >
+                Get in Touch
+              </a>
+              <a 
+                href="/#projects"
+                className="px-10 py-4 rounded-full border-2 border-primary-foreground text-primary-foreground font-medium hover:bg-primary-foreground/10 hover:scale-105 transition-all"
+              >
+                View All Projects
+              </a>
             </div>
           </div>
         </section>
@@ -62,27 +110,27 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-semibold mb-4">Explore</h3>
+              <h3 className="font-semibold mb-4">Navigation</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/wellness" className="hover:text-accent transition-colors">Wellness</a></li>
-                <li><a href="/travel" className="hover:text-accent transition-colors">Travel</a></li>
-                <li><a href="/creativity" className="hover:text-accent transition-colors">Creativity</a></li>
-                <li><a href="/growth" className="hover:text-accent transition-colors">Growth</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">About</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-accent transition-colors">Our Story</a></li>
-                <li><a href="/authors" className="hover:text-accent transition-colors">Authors</a></li>
+                <li><a href="/" className="hover:text-accent transition-colors">Home</a></li>
+                <li><a href="/#projects" className="hover:text-accent transition-colors">Projects</a></li>
+                <li><a href="/about" className="hover:text-accent transition-colors">About</a></li>
                 <li><a href="/contact" className="hover:text-accent transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
+              <h3 className="font-semibold mb-4">Projects</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/style-guide" className="hover:text-accent transition-colors">Style Guide</a></li>
-                <li><a href="/#newsletter" className="hover:text-accent transition-colors">Newsletter</a></li>
+                <li><a href="#georisk" className="hover:text-accent transition-colors">GeoRisk</a></li>
+                <li><a href="#play-senac" className="hover:text-accent transition-colors">Play Senac</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Connect</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="https://github.com" className="hover:text-accent transition-colors">GitHub</a></li>
+                <li><a href="https://linkedin.com" className="hover:text-accent transition-colors">LinkedIn</a></li>
+                <li><a href="mailto:contact@example.com" className="hover:text-accent transition-colors">Email</a></li>
               </ul>
             </div>
             <div>
@@ -94,7 +142,7 @@ const Index = () => {
             </div>
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 Perspective. All rights reserved.</p>
+            <p>© 2025 Developer Portfolio. Built with passion and purpose.</p>
           </div>
         </div>
       </footer>
