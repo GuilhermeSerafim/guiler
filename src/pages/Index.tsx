@@ -89,7 +89,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto pt-4">
               <a 
-                href="https://api.whatsapp.com/send?phone=5511970349947"
+                href="https://wa.me/5511970349947"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-4 rounded-full bg-background text-foreground font-medium hover:bg-background/90 hover:scale-105 transition-all"
@@ -103,6 +103,14 @@ const Index = () => {
                 className="px-10 py-4 rounded-full border-2 border-primary-foreground text-primary-foreground font-medium hover:bg-primary-foreground/10 hover:scale-105 transition-all"
               >
                 LinkedIn
+              </a>
+              <a 
+                href="https://x.com/guilerdev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-10 py-4 rounded-full bg-background text-foreground font-medium hover:bg-background/90 hover:scale-105 transition-all"
+              >
+                Twitter
               </a>
             </div>
           </div>
@@ -137,7 +145,7 @@ const Index = () => {
                 <li><a href="https://instagram.com/iamguiler" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
                 <li><a href="https://x.com/guilerdev" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">X (Twitter)</a></li>
                 <li><a href="https://www.youtube.com/@iamguiler" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=5511970349947" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
+                <li><a href="https://wa.me/5511970349947" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a></li>
               </ul>
             </div>
             <div>
