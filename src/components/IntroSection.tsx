@@ -13,9 +13,6 @@ const IntroSection = () => {
             Com expertise em React, Angular, .NET, Spring Boot e bancos SQL, crio soluções completas 
             que são poderosas e fáceis de usar.
           </p>
-          <p className="text-base text-muted-foreground leading-relaxed animate-slide-up stagger-2 italic">
-            "Código é poesia escrita em lógica, onde cada função conta uma história de resolução de problemas."
-          </p>
           <div className="flex flex-wrap gap-3 pt-4">
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">React</span>
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">Angular</span>

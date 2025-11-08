@@ -8,9 +8,11 @@ const Header = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-    
+
     setIsDark(shouldBeDark);
     if (shouldBeDark) {
       document.documentElement.classList.add("dark");
@@ -20,7 +22,7 @@ const Header = () => {
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
-    
+
     if (newTheme) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -38,26 +40,39 @@ const Header = () => {
           <div className="flex items-center min-w-0">
             <a href="/" className="flex items-center gap-1.5 sm:gap-2">
               <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-primary-foreground font-bold text-base sm:text-lg">GS</span>
+                <span className="text-primary-foreground font-bold text-base sm:text-lg">
+                  GS
+                </span>
               </div>
-              <span className="text-base sm:text-xl font-bold font-serif truncate">Guilherme Serafim</span>
+              <span className="text-base sm:text-xl font-bold font-serif truncate">
+                Guilherme Serafim
+              </span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            <a
+              href="/"
+              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
+            >
               Início
             </a>
-            <a href="/#projects" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            <a
+              href="/#projects"
+              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
+            >
               Projetos
             </a>
-            {/* <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            <a
+              href="/about"
+              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
+            >
               Sobre
-            </a> */}
-            <a href="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Contato
             </a>
+            {/* <a href="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+              Contato
+            </a> */}
           </nav>
 
           {/* Actions */}
@@ -73,8 +88,11 @@ const Header = () => {
                 <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
               )}
             </button>
-            
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
+
+            <Button
+              onClick={() => (window.location.href = "/contact")}
+              className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all"
+            >
               Entre em Contato
             </Button>
 
@@ -84,7 +102,11 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5 sm:h-6 sm:w-6" />
+              ) : (
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -93,16 +115,28 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
+              <a
+                href="/"
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
                 Início
               </a>
-              <a href="/#projects" className="text-sm font-medium hover:text-accent transition-colors">
+              <a
+                href="/#projects"
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
                 Projetos
               </a>
-              <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
+              <a
+                href="/about"
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
                 Sobre
               </a>
-              <a href="/contact" className="text-sm font-medium hover:text-accent transition-colors">
+              <a
+                href="/contact"
+                className="text-sm font-medium hover:text-accent transition-colors"
+              >
                 Contato
               </a>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
