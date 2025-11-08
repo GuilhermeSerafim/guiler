@@ -8,6 +8,15 @@ const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const navigate = useNavigate();
 
+  const scrollToProjects = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
@@ -60,12 +69,13 @@ const Header = () => {
             >
               Início
             </Link>
-            <Link
-              to="/#projects"
-              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
+            <a
+              href="#projects"
+              onClick={scrollToProjects}
+              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all cursor-pointer"
             >
               Projetos
-            </Link>
+            </a>
             <Link
               to="/about"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
@@ -123,12 +133,13 @@ const Header = () => {
               >
                 Início
               </Link>
-              <Link
-                to="/#projects"
-                className="text-sm font-medium hover:text-accent transition-colors"
+              <a
+                href="#projects"
+                onClick={scrollToProjects}
+                className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
               >
                 Projetos
-              </Link>
+              </a>
               <Link
                 to="/about"
                 className="text-sm font-medium hover:text-accent transition-colors"
