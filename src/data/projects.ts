@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "PyProj",
     ],
     link: "https://geo-risk-front.vercel.app",
-    github: "https://github.com/GuilhermeSerafim/geo-risk",
+    github: "https://github.com/GuilhermeSerafim/geo-risk-front",
   },
   {
     id: "play-senac",
