@@ -1,8 +1,10 @@
 import Header from "@/components/Header";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <Header />
@@ -124,7 +126,9 @@ const About = () => {
             transformarmos suas ideias em realidade.
           </p>
           <Button
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => {
+              navigate("/contact");
+            }}
             className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
           >
             <Mail className="mr-2 h-4 w-4" />
