@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -38,7 +40,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-14 sm:h-16 pill-nav px-4 sm:px-6">
           {/* Logo */}
           <div className="flex items-center min-w-0">
-            <a href="/" className="flex items-center gap-1.5 sm:gap-2">
+            <Link to="/" className="flex items-center gap-1.5 sm:gap-2">
               <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-primary-foreground font-bold text-base sm:text-lg">
                   GS
@@ -47,32 +49,32 @@ const Header = () => {
               <span className="text-base sm:text-xl font-bold font-serif truncate">
                 Guilherme Serafim
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
             >
               Início
-            </a>
-            <a
-              href="/#projects"
+            </Link>
+            <Link
+              to="/#projects"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
             >
               Projetos
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
             >
               Sobre
-            </a>
-            {/* <a href="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+            </Link>
+            {/* <Link to="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
               Contato
-            </a> */}
+            </Link> */}
           </nav>
 
           {/* Actions */}
@@ -90,7 +92,7 @@ const Header = () => {
             </button>
 
             <Button
-              onClick={() => (window.location.href = "/contact")}
+              onClick={() => navigate("/contact")}
               className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all"
             >
               Entre em Contato
@@ -115,31 +117,37 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-sm font-medium hover:text-accent transition-colors"
               >
                 Início
-              </a>
-              <a
-                href="/#projects"
+              </Link>
+              <Link
+                to="/#projects"
                 className="text-sm font-medium hover:text-accent transition-colors"
               >
                 Projetos
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="text-sm font-medium hover:text-accent transition-colors"
               >
                 Sobre
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="text-sm font-medium hover:text-accent transition-colors"
               >
                 Contato
-              </a>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
+              </Link>
+              <Button 
+                onClick={() => {
+                  navigate("/contact");
+                  setIsMenuOpen(false);
+                }}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full"
+              >
                 Entre em Contato
               </Button>
             </nav>
