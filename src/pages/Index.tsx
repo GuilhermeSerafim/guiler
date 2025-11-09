@@ -273,8 +273,7 @@ const Index = () => {
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <p>
-              © 2025 Guilherme Serafim • Engenheiro de Software explorando
-              mentes e galáxias
+              © 2025 Guilherme Serafim • Engenheiro de Software 
             </p>
           </div>
         </div>

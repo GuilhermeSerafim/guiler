@@ -10,9 +10,9 @@ const Header = () => {
 
   const scrollToProjects = (e: React.MouseEvent) => {
     e.preventDefault();
-    const projectsSection = document.getElementById('projects');
+    const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      projectsSection.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };
@@ -82,9 +82,13 @@ const Header = () => {
             >
               Sobre
             </Link>
-            {/* <Link to="/contact" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Contato
-            </Link> */}
+            <a
+              href="/GuilhermeSerafim_Fullstack.pdf"
+              download
+              className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
+            >
+              Currículo
+            </a>
           </nav>
 
           {/* Actions */}
@@ -127,12 +131,6 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              <Link
-                to="/"
-                className="text-sm font-medium hover:text-accent transition-colors"
-              >
-                Início
-              </Link>
               <a
                 href="#projects"
                 onClick={scrollToProjects}
@@ -146,13 +144,14 @@ const Header = () => {
               >
                 Sobre
               </Link>
-              <Link
-                to="/contact"
+              <a
+                href="/GuilhermeSerafim_Fullstack.pdf"
+                download
                 className="text-sm font-medium hover:text-accent transition-colors"
               >
-                Contato
-              </Link>
-              <Button 
+                Currículo
+              </a>
+              <Button
                 onClick={() => {
                   navigate("/contact");
                   setIsMenuOpen(false);
