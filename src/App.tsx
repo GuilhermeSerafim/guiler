@@ -16,6 +16,8 @@ import StyleGuide from "./pages/StyleGuide";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import { Scene } from "./components/Scene";
+import { Canvas } from "@react-three/fiber";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,14 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route
+  path="/xyz"
+  element={
+    <Canvas>
+      <Scene />
+    </Canvas>
+  }
+/>
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
