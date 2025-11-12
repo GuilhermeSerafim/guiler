@@ -5,6 +5,7 @@ import IntroSection from "@/components/IntroSection";
 import { projects, inspirationalQuotes } from "@/data/projects";
 import profileSpeaking from "@/assets/profile-speaking.jpg";
 import profileSide from "@/assets/profile-side.jpg";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -153,17 +154,17 @@ const Index = () => {
               <h3 className="font-semibold mb-4">Navegação</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="/" className="hover:text-accent transition-colors">
+                  <Link to="/" className="hover:text-accent transition-colors">
                     Início
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/#projects"
+                  <Link
+                    to="/projects"
                     className="hover:text-accent transition-colors"
                   >
                     Projetos
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -174,12 +175,12 @@ const Index = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className="hover:text-accent transition-colors"
                   >
                     Contato
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -269,12 +270,9 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-
           </div>
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>
-              © 2025 Guilherme Serafim • Engenheiro de Software 
-            </p>
+            <p>© 2025 Guilherme Serafim • Engenheiro de Software</p>
           </div>
         </div>
       </footer>

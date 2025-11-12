@@ -77,13 +77,13 @@ const Header = () => {
             >
               Início
             </Link>
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               onClick={scrollToProjects}
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all cursor-pointer"
             >
               Projetos
-            </a>
+            </Link>
             <Link
               to="/about"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"

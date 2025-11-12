@@ -1,6 +1,7 @@
 import { Github, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/profile-main.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -37,8 +38,8 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6 pt-4 animate-slide-up stagger-3">
-            <a 
-              href="#projects"
+            <Link 
+              to="/projects"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -46,7 +47,7 @@ const HeroSection = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-4 md:px-10 md:py-6 text-base font-medium transition-all hover:scale-105 w-full sm:w-auto text-center inline-block"
             >
               Ver Projetos
-            </a>
+            </Link>
 
             <div className="flex items-center gap-4">
               <a
