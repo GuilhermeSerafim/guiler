@@ -9,19 +9,78 @@ const IntroSection = () => {
             Construindo o futuro, uma linha de código por vez
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1">
-            Como Desenvolvedor Full Stack, eu conecto a elegância do frontend com a robustez do backend. 
-            Com expertise em React, Angular, .NET, Spring Boot e bancos SQL, crio soluções completas 
-            que são poderosas e fáceis de usar.
+            Conecto a elegância do frontend com a robustez do backend. Com a
+            minha expertise crio soluções completas que são poderosas e fáceis
+            de usar.
           </p>
           <div className="flex flex-wrap gap-3 pt-4">
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">React</span>
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">Angular</span>
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">.NET</span>
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">Spring Boot</span>
-            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">SQL</span>
+            {/* Frontend */}
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Angular
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              TypeScript
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              JavaScript
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              React
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Redux
+            </span>
+
+            {/* Backend */}
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Java
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Spring Boot
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              .NET
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              C#
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Node.js
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Python
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Swift
+            </span>
+
+            {/* Cloud & DevOps */}
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              AWS
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Docker
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Vercel
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Render
+            </span>
+
+            {/* Databases */}
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Oracle
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              MySQL
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              MongoDB
+            </span>
           </div>
         </div>
-        
+
         <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden animate-scale-in">
           <img
             src={profileAlt}

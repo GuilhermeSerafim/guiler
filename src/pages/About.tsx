@@ -11,7 +11,6 @@ const About = () => {
       <Header />
       <AboutHero />
       <div className="min-h-screen bg-background animate-fade-in">
-
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Hero Section */}
           <div id="about-section" className="mb-16 text-center space-y-6">
@@ -19,8 +18,11 @@ const About = () => {
               Sobre Mim
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1">
-              Um espaço para explorar ideias, encontrar inspiração e descobrir
-              novas maneiras de ver o mundo.
+              A cada era, o espaço-tempo se dobra: ora espaço sem tempo; ora
+              tempo sem espaço. Quando os dois colidem, nasce a disrupção — como
+              as borboletas negras que prosperaram na 2ª Revolução Industrial
+              graças à fuligem. Não apenas me adapto — eu sou a própria
+              disrupção.
             </p>
           </div>
 

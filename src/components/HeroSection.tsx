@@ -24,15 +24,15 @@ const HeroSection = () => {
                 Guilherme Serafim
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                Engenheiro de Software
+                Desenvolvedor Full Stack
               </p>
             </div>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-xl animate-slide-up stagger-1 italic">
-              "Explorando mentes e galáxias através do código"
+              "Transformo idéias em realidade"
             </p>
             <p className="text-foreground text-base md:text-lg leading-relaxed max-w-xl animate-slide-up stagger-2">
-              Desenvolvedor Full Stack especializado em React, Angular, .NET e Spring Boot. 
-              Apaixonado por construir soluções escaláveis e explorar a interseção entre tecnologia e potencial humano.
+              Desenvolvedor Full Stack especializado em React, Angular, Java e C#. 
+              Crio soluções disruptivas, inovadoras, escaláveis e eficientes que impulsionam negócios.
             </p>
           </div>
 

@@ -12,7 +12,15 @@ const Header = () => {
     e.preventDefault();
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 100; // altura aproximada do header
+      const elementPosition = projectsSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
       setIsMenuOpen(false);
     }
   };
