@@ -1,14 +1,14 @@
-import { useMemo, useRef } from "react"
-import * as THREE from "three"
-import { useFrame } from "@react-three/fiber"
+import { useMemo, useRef, useState, useEffect } from "react";
+import * as THREE from "three";
+import { useFrame } from "@react-three/fiber";
 
 type DotKnotProps = {
-  radius?: number
-  tube?: number
-  segments?: number
-  speed?: number
-  size?: number
-}
+  radius?: number;
+  tube?: number;
+  segments?: number;
+  speed?: number;
+  size?: number;
+};
 
 export function DotKnot({
   radius = 2,
@@ -17,30 +17,53 @@ export function DotKnot({
   speed = 0.18,
   size = 0.035,
 }: DotKnotProps) {
-  const pointsRef = useRef<THREE.Points>(null!)
+  const pointsRef = useRef<THREE.Points>(null!);
+  const [isDark, setIsDark] = useState(false);
 
-  const { positions, colors } = useMemo(() => {
-    const geo = new THREE.TorusKnotGeometry(radius, tube, segments, 64)
-    const pos = geo.attributes.position.array as Float32Array
-    const count = geo.attributes.position.count
+  useEffect(() => {
+     if (typeof window === "undefined") return
 
-    const colorArray = new Float32Array(count * 3)
-    const c = new THREE.Color()
-    for (let i = 0; i < count; i++) {
-      const t = i / count // 0..1
-      c.setHSL(t, 1, 0.55) // 🌈 arco-íris
-      colorArray[i * 3 + 0] = c.r
-      colorArray[i * 3 + 1] = c.g
-      colorArray[i * 3 + 2] = c.b
+    const root = document.documentElement
+
+    const updateTheme = () => {
+      setIsDark(root.classList.contains("dark"))
     }
 
-    return { positions: pos, colors: colorArray }
-  }, [radius, tube, segments])
+    // seta logo na primeira vez
+    updateTheme()
+
+    const observer = new MutationObserver(updateTheme)
+
+    observer.observe(root, {
+      attributes: true,
+      attributeFilter: ["class"],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
+  const { positions, colors } = useMemo(() => {
+    const geo = new THREE.TorusKnotGeometry(radius, tube, segments, 64);
+    const pos = geo.attributes.position.array as Float32Array;
+    const count = geo.attributes.position.count;
+
+    const colorArray = new Float32Array(count * 3);
+    const c = new THREE.Color();
+    for (let i = 0; i < count; i++) {
+      const t = i / count; // 0..1
+      c.setHSL(t, 1, 0.55); // 🌈 arco-íris
+      colorArray[i * 3 + 0] = c.r;
+      colorArray[i * 3 + 1] = c.g;
+      colorArray[i * 3 + 2] = c.b;
+    }
+
+    return { positions: pos, colors: colorArray };
+  }, [radius, tube, segments]);
 
   useFrame((_, d) => {
-    pointsRef.current.rotation.y += d * speed
-    pointsRef.current.rotation.x += d * speed * 0.5
-  })
+    pointsRef.current.rotation.y += d * speed;
+    pointsRef.current.rotation.x += d * speed * 0.5;
+  });
 
   return (
     <points ref={pointsRef}>
@@ -64,8 +87,12 @@ export function DotKnot({
         vertexColors
         transparent
         depthWrite={false}
-        blending={THREE.AdditiveBlending} // ✨ brilho “neon”
+        blending={
+            isDark
+            ? THREE.AdditiveBlending  // ✨ neon no dark
+            : THREE.NormalBlending    // normal no light
+        }
       />
     </points>
-  )
+  );
 }
