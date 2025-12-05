@@ -12,7 +12,7 @@ const About = () => {
       <AboutHero />
       <div className="min-h-screen bg-background animate-fade-in">
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          
+
           {/* Intro Section (Seu texto original) */}
           <div id="about-section" className="mb-20 text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-slide-down">
@@ -63,14 +63,13 @@ const About = () => {
           {/* New Values Section */}
           <section className="mb-24 animate-slide-up stagger-3">
             <h2 className="text-3xl font-bold text-center mb-12">Pilares Fundamentais</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Card 1 */}
               <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Antifragilidade</h3>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Singularidade</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  O caos não me destrói; ele me melhora. Sistemas robustos quebram; 
-                  sistemas antifrágeis se fortalecem diante da volatilidade e do erro.
+                  No horizonte de eventos da tecnologia, as regras antigas não se aplicam. Busco criar o ponto de inflexão onde o código deixa de ser ferramenta e passa a redefinir a realidade do negócio.
                 </p>
               </div>
 
@@ -78,7 +77,7 @@ const About = () => {
               <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
                 <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Alquimia Digital</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  A capacidade de transformar dados brutos e lógica fria em experiências 
+                  A capacidade de transformar dados brutos e lógica fria em experiências
                   humanas, intuitivas e de alto valor. Onde há chumbo, vejo ouro.
                 </p>
               </div>
@@ -87,7 +86,7 @@ const About = () => {
               <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
                 <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Eterno Beta</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  A versão final é um mito. A estagnação é o fim. A busca pela 
+                  A versão final é um mito. A estagnação é o fim. A busca pela
                   próxima iteração, a próxima refatoração e a próxima quebra de paradigma é constante.
                 </p>
               </div>
@@ -98,7 +97,7 @@ const About = () => {
           <section className="text-center py-12 rounded-2xl bg-muted/30 border border-border/50 animate-slide-up stagger-4">
             <h2 className="text-3xl font-bold mb-4">Pronto para a Disrupção?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Não procuro apenas projetos, procuro desafios que exijam visão. 
+              Não procuro apenas projetos, procuro desafios que exijam visão.
               Vamos construir o futuro antes que ele chegue.
             </p>
             <Button
@@ -111,7 +110,7 @@ const About = () => {
               Iniciar Colaboração
             </Button>
           </section>
-          
+
         </main>
       </div>
     </main>
