@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom"; // Adicionado useLocation
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  
   const navigate = useNavigate();
+  const location = useLocation(); // Hook para saber a rota atual
 
-  const scrollToProjects = (e: React.MouseEvent) => {
-    e.preventDefault();
+  // Função auxiliar para realizar o scroll (reutilizável)
+  const executeScroll = () => {
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      const headerOffset = 100; // altura aproximada do header
+      const headerOffset = 100;
       const elementPosition = projectsSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -20,28 +22,46 @@ const Header = () => {
         top: offsetPosition,
         behavior: "smooth",
       });
-
-      setIsMenuOpen(false);
     }
   };
 
+  const scrollToProjects = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMenuOpen(false); // Fecha menu mobile se estiver aberto
+
+    if (location.pathname === "/") {
+      // Se já estamos na home, rola direto
+      executeScroll();
+    } else {
+      // Se não estamos na home, navega para lá passando um estado
+      navigate("/", { state: { target: "projects" } });
+    }
+  };
+
+  // Effect para detectar navegação vindo de outra página com intenção de scroll
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.target === "projects") {
+      // Um pequeno timeout garante que o DOM da Home foi montado antes de procurar o ID
+      setTimeout(() => {
+        executeScroll();
+        // Limpa o state para evitar scroll indesejado ao dar refresh
+        window.history.replaceState({}, document.title);
+      }, 100);
+    }
+  }, [location]);
+
+  // ... (Lógica de tema permanece igual)
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const shouldBeDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-
     setIsDark(shouldBeDark);
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark");
-    }
+    if (shouldBeDark) document.documentElement.classList.add("dark");
   }, []);
 
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
-
     if (newTheme) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -77,13 +97,16 @@ const Header = () => {
             >
               Início
             </Link>
-            <Link
-              to="/projects"
+            
+            {/* Link atualizado */}
+            <a
+              href="#projects" // Alterado para âncora ou mantido Link, mas o onClick manda
               onClick={scrollToProjects}
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all cursor-pointer"
             >
               Projetos
-            </Link>
+            </a>
+
             <Link
               to="/about"
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
@@ -99,39 +122,17 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Actions */}
+          {/* Actions e Mobile Menu Button (Mantidos iguais) */}
           <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-            <button
-              onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-full hover:bg-muted/60 transition-all"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <Sun className="h-4 w-4 sm:h-5 sm:w-5" />
-              ) : (
-                <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
-              )}
-            </button>
-
-            <Button
-              onClick={() => navigate("/contact")}
-              className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all"
-            >
-              Entre em Contato
-            </Button>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-1.5 sm:p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-5 w-5 sm:h-6 sm:w-6" />
-              ) : (
-                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
-              )}
-            </button>
+             <button onClick={toggleTheme} className="p-1.5 sm:p-2 rounded-full hover:bg-muted/60 transition-all">
+               {isDark ? <Sun className="h-4 w-4 sm:h-5 sm:w-5" /> : <Moon className="h-4 w-4 sm:h-5 sm:w-5" />}
+             </button>
+             <Button onClick={() => navigate("/contact")} className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
+               Entre em Contato
+             </Button>
+             <button className="md:hidden p-1.5 sm:p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+               {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
+             </button>
           </div>
         </div>
 
@@ -139,6 +140,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
+              {/* Link Mobile Atualizado */}
               <a
                 href="#projects"
                 onClick={scrollToProjects}
@@ -146,26 +148,13 @@ const Header = () => {
               >
                 Projetos
               </a>
-              <Link
-                to="/about"
-                className="text-sm font-medium hover:text-accent transition-colors"
-              >
+              <Link to="/about" className="text-sm font-medium hover:text-accent transition-colors">
                 Sobre
               </Link>
-              <a
-                href="/GuilhermeSerafim_Fullstack.pdf"
-                download
-                className="text-sm font-medium hover:text-accent transition-colors"
-              >
+              <a href="/GuilhermeSerafim_Fullstack.pdf" download className="text-sm font-medium hover:text-accent transition-colors">
                 Currículo
               </a>
-              <Button
-                onClick={() => {
-                  navigate("/contact");
-                  setIsMenuOpen(false);
-                }}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full"
-              >
+              <Button onClick={() => { navigate("/contact"); setIsMenuOpen(false); }} className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
                 Entre em Contato
               </Button>
             </nav>
