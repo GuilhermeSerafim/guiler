@@ -12,12 +12,13 @@ const About = () => {
       <AboutHero />
       <div className="min-h-screen bg-background animate-fade-in">
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Hero Section */}
-          <div id="about-section" className="mb-16 text-center space-y-6">
+          
+          {/* Intro Section (Seu texto original) */}
+          <div id="about-section" className="mb-20 text-center space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-slide-down">
               Sobre Mim
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1">
+            <p className="text-lg text-muted-foreground leading-relaxed animate-slide-up stagger-1 max-w-3xl mx-auto">
               A cada era, o espaço-tempo se dobra: ora espaço sem tempo; ora
               tempo sem espaço. Quando os dois colidem, nasce a disrupção — como
               as borboletas negras que prosperaram na 2ª Revolução Industrial
@@ -26,120 +27,91 @@ const About = () => {
             </p>
           </div>
 
-          {/* Story Section */}
-          <section className="mb-16 space-y-6 text-muted-foreground animate-slide-up stagger-2">
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              Minha História
-            </h2>
-            <p>
-              Minha jornada começou com uma simples pergunta: E se eu pudesse
-              criar soluções que realmente fizessem a diferença na vida das
-              pessoas através da tecnologia?
-            </p>
-            <p>
-              Em um mundo repleto de informação, senti a necessidade de algo
-              diferente—um profissional que prioriza a qualidade sobre a
-              quantidade, conexões autênticas sobre números, e resultados reais
-              sobre promessas vazias.
-            </p>
-            <p>
-              Exploro tecnologias que importam: práticas de desenvolvimento que
-              realmente funcionam, experiências que transformam ideias em
-              realidade, e estratégias de crescimento que levam a mudanças
-              duradouras. Minha abordagem é baseada em curiosidade, respaldada
-              por pesquisa e enriquecida pela experiência prática.
-            </p>
-          </section>
-
-          {/* Mission Section */}
-          <section className="mb-16 rounded-2xl bg-card p-8 md:p-12">
-            <h2 className="text-3xl font-bold mb-6">Minha Missão</h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                Acredito que a forma como abordamos os desafios molda como os
-                resolvemos. Dedico-me a:
+          {/* New Story & Mission Split Section */}
+          <section className="mb-24 grid grid-cols-1 md:grid-cols-2 gap-12 animate-slide-up stagger-2">
+            {/* A Origem */}
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-foreground flex items-center gap-3">
+                <span className="w-8 h-[2px] bg-primary/60 inline-block rounded-full"></span>
+                A Origem
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Minha trajetória não é linear; é quântica. Onde existia ruído, aprendi a
+                identificar padrões. Assim como a biologia evolui através de erros e acertos,
+                minha codificação nasceu da necessidade de impor ordem ao caos digital.
+                Não escrevo apenas linhas de comando; construo ecossistemas que respiram,
+                reagem e sobrevivem à obsolescência programada.
               </p>
-              <ul className="space-y-3 ml-6">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>
-                    Desenvolver soluções equilibradas que priorizam resultados
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>
-                    Explorar novas tecnologias com curiosidade e respeito
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>
-                    Criar código limpo e manutenível que resolve problemas reais
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>
-                    Abraçar o crescimento profissional como uma jornada contínua
-                  </span>
-                </li>
-              </ul>
+            </div>
+
+            {/* A Missão */}
+            <div className="space-y-4">
+              <h2 className="text-2xl font-bold text-foreground flex items-center gap-3">
+                <span className="w-8 h-[2px] bg-primary/60 inline-block rounded-full"></span>
+                A Missão
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Transcender a tela. O código é apenas a ferramenta; o objetivo real é
+                dobrar a realidade. Minha missão é arquitetar soluções que não apenas
+                resolvam problemas atuais, mas que antecipem as perguntas que ainda
+                ninguém teve coragem de fazer. É transformar a complexidade bruta em
+                elegância funcional.
+              </p>
             </div>
           </section>
 
-          {/* Values Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">Meus Valores</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 rounded-xl bg-muted">
-                <h3 className="text-xl font-semibold mb-3">Autenticidade</h3>
-                <p className="text-muted-foreground">
-                  Compartilho experiências reais, reflexões honestas e insights
-                  genuínos—não perfeição fabricada.
+          {/* New Values Section */}
+          <section className="mb-24 animate-slide-up stagger-3">
+            <h2 className="text-3xl font-bold text-center mb-12">Pilares Fundamentais</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Antifragilidade</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  O caos não me destrói; ele me melhora. Sistemas robustos quebram; 
+                  sistemas antifrágeis se fortalecem diante da volatilidade e do erro.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-muted">
-                <h3 className="text-xl font-semibold mb-3">Dedicação</h3>
-                <p className="text-muted-foreground">
-                  Cada projeto é cuidadosamente planejado, desenvolvido com
-                  atenção e projetado para agregar valor real.
+
+              {/* Card 2 */}
+              <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Alquimia Digital</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  A capacidade de transformar dados brutos e lógica fria em experiências 
+                  humanas, intuitivas e de alto valor. Onde há chumbo, vejo ouro.
                 </p>
               </div>
-              <div className="p-6 rounded-xl bg-muted">
-                <h3 className="text-xl font-semibold mb-3">Colaboração</h3>
-                <p className="text-muted-foreground">
-                  Valorizo diferentes perspectivas e acredito que cada projeto
-                  merece respeito e dedicação única.
-                </p>
-              </div>
-              <div className="p-6 rounded-xl bg-muted">
-                <h3 className="text-xl font-semibold mb-3">Inovação</h3>
-                <p className="text-muted-foreground">
-                  Promovo práticas que são sustentáveis e escaláveis, sempre
-                  buscando as melhores soluções.
+
+              {/* Card 3 */}
+              <div className="p-8 rounded-xl bg-card border border-border/40 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">Eterno Beta</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  A versão final é um mito. A estagnação é o fim. A busca pela 
+                  próxima iteração, a próxima refatoração e a próxima quebra de paradigma é constante.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="text-center py-12 rounded-2xl bg-card">
-            <h2 className="text-3xl font-bold mb-4">Vamos Trabalhar Juntos?</h2>
+          {/* CTA Section - Adjusted tone slightly */}
+          <section className="text-center py-12 rounded-2xl bg-muted/30 border border-border/50 animate-slide-up stagger-4">
+            <h2 className="text-3xl font-bold mb-4">Pronto para a Disrupção?</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Entre em contato para discutirmos seu próximo projeto e
-              transformarmos suas ideias em realidade.
+              Não procuro apenas projetos, procuro desafios que exijam visão. 
+              Vamos construir o futuro antes que ele chegue.
             </p>
             <Button
               onClick={() => {
                 navigate("/contact");
               }}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-primary/20 transition-all duration-300"
             >
-              <Mail className="mr-2 h-4 w-4" />
-              Entre em Contato
+              <Mail className="mr-2 h-5 w-5" />
+              Iniciar Colaboração
             </Button>
           </section>
+          
         </main>
       </div>
     </main>
