@@ -8,6 +8,7 @@ export interface Project {
   technologies: string[];
   link?: string;
   github?: string;
+  isMaintenance?: boolean;
 }
 
 export const projects: Project[] = [
@@ -56,6 +57,7 @@ export const projects: Project[] = [
     ],
     link: "https://play-senac.vercel.app",
     github: "https://github.com/GuilhermeSerafim/play-senac",
+    isMaintenance: true,
   },
 ];
 
