@@ -9,6 +9,7 @@ export interface Project {
   link?: string;
   github?: string;
   isMaintenance?: boolean;
+  award?: string;
 }
 
 export const projects: Project[] = [
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     ],
     link: "https://geo-risk-front.vercel.app",
     github: "https://github.com/GuilhermeSerafim/geo-risk-front",
+    award: "2º Lugar - OpenAI Hackathon 2025"
   },
   {
     id: "play-senac",
