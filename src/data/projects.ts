@@ -48,7 +48,7 @@ export const projects: Project[] = [
     date: "2025",
     image: "/play-senac.png",
     description:
-      "Ecossistema digital focado na automação e gerenciamento de recursos esportivos institucionais. O sistema substitui fluxos analógicos por uma interface centralizada com calendário em tempo real e painéis administrativos avançados. Desenvolvido com foco em performance e integridade de dados.",
+      "Ecossistema digital focado na automação e gerenciamento de recursos esportivos do Centro Universitário Senac. O sistema substitui fluxos analógicos por uma interface centralizada com calendário em tempo real e painéis administrativos avançados.",
     technologies: [
       "Angular",
       "Java",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     date: "2025",
     image: "/save-nutri.png",
     description:
-      "Solução estratégica para otimização do PNAE (Lei 11.947/2009), operando exclusivamente na região de Teresópolis, RJ. A plataforma utiliza algoritmos de matching geoespacial para redução de custos logísticos e IA generativa para a criação de cardápios nutricionais baseados na safra real dos produtores locais. Construído sob padrões de Clean Architecture para garantir a robustez necessária em operações governamentais.",
+      "Solução estratégica para otimização do PNAE (Lei 11.947/2009), operando exclusivamente na região de Teresópolis, RJ. A plataforma utiliza algoritmos de matching geoespacial para redução de custos logísticos e IA generativa para a criação de cardápios nutricionais baseados na safra real dos produtores locais.",
     technologies: [
       "Python",
       "FastAPI",
@@ -84,10 +84,3 @@ export const projects: Project[] = [
   },
 ];
 
-export const inspirationalQuotes = [
-  "In every challenge, I see an opportunity for learning, like an astronomer faced with a cosmic mystery.",
-  "Code is poetry written in logic, where each function tells a story of problem-solving.",
-  "Innovation happens at the intersection of curiosity and persistence.",
-  "The best solutions emerge when technology serves human needs, not the other way around.",
-  "Every project is a journey of discovery, revealing not just technical solutions but also personal growth.",
-];
