@@ -20,7 +20,7 @@ export const projects: Project[] = [
     date: "2025",
     image: "/geo-risk.png",
     description:
-      "Plataforma avançada de geoprocessamento desenvolvida para a análise preditiva de riscos de alagamento em Curitiba, PR. A solução utiliza uma API robusta em FastAPI para cálculos geodésicos complexos e integração com modelos de IA para geração automática de relatórios técnicos. O front-end em Next.js oferece visualizações 3D interativas via Mapbox, permitindo a gestão eficiente de dados críticos para segurança urbana.",
+      "Plataforma avançada de geoprocessamento desenvolvida para a análise preditiva de riscos de alagamento em Curitiba, PR. A solução utiliza uma API robusta em FastAPI para cálculos geodésicos complexos e integração com modelos de IA para geração automática de relatórios técnicos.",
     technologies: [
       "Python",
       "FastAPI",
