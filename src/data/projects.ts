@@ -39,7 +39,7 @@ export const projects: Project[] = [
     ],
     link: "https://geo-risk-front.vercel.app",
     github: "https://github.com/GuilhermeSerafim/geo-risk-front",
-    award: "2º Lugar - OpenAI Hackathon 2025"
+    award: "2º Lugar - OpenAI Hackathon 2025",
   },
   {
     id: "play-senac",
@@ -59,6 +59,28 @@ export const projects: Project[] = [
     ],
     link: "https://play-senac.vercel.app",
     github: "https://github.com/GuilhermeSerafim/play-senac",
+  },
+  {
+    id: "save-nutri",
+    title: "SaveNutri",
+    category: "SaaS B2G - Logística e Nutrição Escolar",
+    date: "2025",
+    image: "/save-nutri.png",
+    description:
+      "Plataforma desenhada para otimizar o cumprimento da Lei 11.947/2009 (PNAE), conectando escolas públicas a agricultores familiares locais. O sistema utiliza algoritmos de matching geoespacial para calcular rotas e economia logística, integrando a API da OpenAI para gerar cardápios inteligentes baseados na safra real dos produtores. Focado em escalabilidade, o backend aplica princípios de Clean Architecture e SOLID.",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "OpenAI API",
+      "Mapbox GL JS",
+      "Geopy",
+      "Pydantic",
+      "TypeScript",
+      "TailwindCSS",
+    ],
+    github: "https://github.com/GuilhermeSerafim/save-nutri-back",
+    link: "https://save-nutri.vercel.app/",
   },
 ];
 
