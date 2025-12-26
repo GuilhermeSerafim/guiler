@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Construction, Trophy } from "lucide-react"; // Importe o Trophy
+import { ExternalLink, Github, Construction, Trophy, Code2, Database } from "lucide-react";
 
 interface ProjectCardProps {
   id: string;
@@ -9,9 +9,10 @@ interface ProjectCardProps {
   description: string;
   technologies: string[];
   link?: string;
-  github?: string;
+  githubFront?: string; // Atualizado
+  githubBack?: string;  // Atualizado
   isMaintenance?: boolean;
-  award?: string; // Nova prop
+  award?: string;
 }
 
 const ProjectCard = ({ 
@@ -22,12 +23,13 @@ const ProjectCard = ({
   description, 
   technologies,
   link,
-  github,
+  githubFront,
+  githubBack,
   isMaintenance = false,
-  award // Recebendo a prop
+  award 
 }: ProjectCardProps) => {
   return (
-    <div className="group relative block rounded-[2.5rem] overflow-hidden card-hover bg-card">
+    <div className="group relative block rounded-[2.5rem] overflow-hidden card-hover bg-card border border-border/50">
       {/* Image Container */}
       <div className="relative aspect-[16/10] overflow-hidden bg-muted rounded-t-[2.5rem]">
         <img
@@ -36,17 +38,12 @@ const ProjectCard = ({
           className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${isMaintenance ? 'grayscale-[50%]' : ''}`}
         />
         
-        {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         
-        {/* Header Tags: Categoria, Date e Badges */}
         <div className="absolute top-6 left-6 right-6 flex items-start justify-between pointer-events-none">
-          {/* Grupo da Esquerda (Tags) */}
           <div className="flex flex-col gap-2 items-start sm:flex-row sm:items-center">
-            
-            {/* BADGE DE PRÊMIO (Destaque Principal) */}
             {award && (
-              <span className="px-4 py-1.5 rounded-full text-xs font-bold backdrop-blur-md bg-yellow-500/90 text-black border border-yellow-400/50 flex items-center gap-1.5 shadow-[0_0_15px_rgba(234,179,8,0.3)] animate-in fade-in slide-in-from-top-2">
+              <span className="px-4 py-1.5 rounded-full text-xs font-bold backdrop-blur-md bg-yellow-500/90 text-black border border-yellow-400/50 flex items-center gap-1.5 shadow-[0_0_15px_rgba(234,179,8,0.3)]">
                 <Trophy className="w-3.5 h-3.5" strokeWidth={2.5} />
                 {award}
               </span>
@@ -56,7 +53,6 @@ const ProjectCard = ({
               {category}
             </span>
             
-            {/* Badge de Manutenção */}
             {isMaintenance && (
               <span className="px-4 py-1.5 rounded-full text-xs font-medium backdrop-blur-md bg-amber-500/90 text-white border border-amber-500/20 flex items-center gap-1">
                 <Construction className="w-3 h-3" />
@@ -65,13 +61,11 @@ const ProjectCard = ({
             )}
           </div>
 
-          {/* Data (Direita) */}
           <span className="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-medium text-white border border-white/30 whitespace-nowrap ml-2">
             {date}
           </span>
         </div>
 
-        {/* Title overlay */}
         <div className="absolute bottom-6 left-6 right-6">
           <h3 className="text-white text-2xl md:text-3xl font-bold leading-tight tracking-tight">
             {title}
@@ -98,7 +92,8 @@ const ProjectCard = ({
         </div>
 
         {/* Links Section */}
-        <div className="flex gap-4 pt-2">
+        <div className="flex flex-wrap gap-6 pt-2 border-t border-border/50">
+          {/* Live Project */}
           {link && (
             isMaintenance ? (
               <div className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground/70 cursor-not-allowed select-none">
@@ -117,15 +112,30 @@ const ProjectCard = ({
               </a>
             )
           )}
-          {github && (
+
+          {/* Front-end Link */}
+          {githubFront && (
             <a
-              href={github}
+              href={githubFront}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <Github className="w-4 h-4" />
-              Código Fonte
+              Front
+            </a>
+          )}
+
+          {/* Back-end Link */}
+          {githubBack && (
+            <a
+              href={githubBack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              <Code2 className="w-4 h-4" />
+              Back
             </a>
           )}
         </div>

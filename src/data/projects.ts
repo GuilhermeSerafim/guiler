@@ -7,7 +7,8 @@ export interface Project {
   description: string;
   technologies: string[];
   link?: string;
-  github?: string;
+  githubFront?: string; 
+  githubBack?: string; 
   isMaintenance?: boolean;
   award?: string;
 }
@@ -22,23 +23,12 @@ export const projects: Project[] = [
     description:
       "Plataforma avançada de geoprocessamento desenvolvida para a análise preditiva de riscos de alagamento em Curitiba, PR. A solução utiliza uma API robusta em FastAPI para cálculos geodésicos complexos e integração com modelos de IA para geração automática de relatórios técnicos.",
     technologies: [
-      "Python",
-      "FastAPI",
-      "Next.js",
-      "React",
-      "Mapbox GL JS",
-      "Shadcn/UI",
-      "TailwindCSS",
-      "LangChain",
-      "OpenAI API",
-      "FAISS",
-      "TypeScript",
-      "Vite",
-      "Shapely",
-      "PyProj",
+      "Python", "FastAPI", "Next.js", "React", "Mapbox GL JS", "Shadcn/UI", 
+      "TailwindCSS", "LangChain", "OpenAI API", "FAISS", "TypeScript", "Vite", "Shapely", "PyProj",
     ],
     link: "https://geo-risk-front.vercel.app",
-    github: "https://github.com/GuilhermeSerafim/geo-risk-front",
+    githubFront: "https://github.com/GuilhermeSerafim/geo-risk-front",
+    githubBack: "https://github.com/GuilhermeSerafim/geo-risk",
     award: "2º Lugar - OpenAI Hackathon 2025",
   },
   {
@@ -50,15 +40,11 @@ export const projects: Project[] = [
     description:
       "Ecossistema digital focado na automação e gerenciamento de recursos esportivos do Centro Universitário Senac. O sistema substitui fluxos analógicos por uma interface centralizada com calendário em tempo real e painéis administrativos avançados.",
     technologies: [
-      "Angular",
-      "Java",
-      "Spring Boot",
-      "MySQL",
-      "TypeScript",
-      "Figma",
+      "Angular", "Java", "Spring Boot", "MySQL", "TypeScript", "Figma",
     ],
     link: "https://play-senac.vercel.app",
-    github: "https://github.com/GuilhermeSerafim/play-senac",
+    githubFront: "https://github.com/GuilhermeSerafim/play-senac", 
+    githubBack: "https://github.com/GuilhermeSerafim/play-senac-api",
   },
   {
     id: "save-nutri",
@@ -69,18 +55,10 @@ export const projects: Project[] = [
     description:
       "Solução estratégica para otimização do PNAE (Lei 11.947/2009), operando exclusivamente na região de Teresópolis, RJ. A plataforma utiliza algoritmos de matching geoespacial para redução de custos logísticos e IA generativa para a criação de cardápios nutricionais baseados na safra real dos produtores locais.",
     technologies: [
-      "Python",
-      "FastAPI",
-      "Next.js",
-      "OpenAI API",
-      "Mapbox GL JS",
-      "Geopy",
-      "Pydantic",
-      "TypeScript",
-      "TailwindCSS",
+      "Python", "FastAPI", "Next.js", "OpenAI API", "Mapbox GL JS", "Geopy", "Pydantic", "TypeScript", "TailwindCSS",
     ],
-    github: "https://github.com/GuilhermeSerafim/save-nutri-back",
+    githubBack: "https://github.com/GuilhermeSerafim/save-nutri-back",
+    githubFront: "https://github.com/GuilhermeSerafim/save-nutri-front",
     link: "https://save-nutri.vercel.app/",
   },
 ];
-
