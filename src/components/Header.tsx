@@ -8,9 +8,17 @@ const Header = () => {
   const [isDark, setIsDark] = useState(false);
   
   const navigate = useNavigate();
-  const location = useLocation(); // Hook para saber a rota atual
+  const location = useLocation();
 
-  // Função auxiliar para realizar o scroll (reutilizável)
+  // Função para rolar até o topo
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsMenuOpen(false); // Fecha o menu mobile se estiver aberto
+  };
+
   const executeScroll = () => {
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
@@ -93,6 +101,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-2">
             <Link
               to="/"
+              onClick={scrollToTop}
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
             >
               Início
@@ -109,6 +118,7 @@ const Header = () => {
 
             <Link
               to="/about"
+              onClick={scrollToTop}
               className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all"
             >
               Sobre
