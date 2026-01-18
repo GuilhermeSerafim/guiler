@@ -51,10 +51,16 @@ const IntroSection = () => {
               Python
             </span>
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              FastAPI
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               Swift
             </span>
 
             {/* Cloud & DevOps */}
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              Google Cloud
+            </span>
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               AWS
             </span>
@@ -74,6 +80,9 @@ const IntroSection = () => {
             </span>
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               MySQL
+            </span>
+            <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              PostgreSQL
             </span>
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               MongoDB
