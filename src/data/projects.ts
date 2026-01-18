@@ -45,6 +45,7 @@ export const projects: Project[] = [
     link: "https://play-senac.vercel.app",
     githubFront: "https://github.com/GuilhermeSerafim/play-senac", 
     githubBack: "https://github.com/GuilhermeSerafim/play-senac-api",
+    isMaintenance: true,
   },
   {
     id: "save-nutri",
