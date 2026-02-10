@@ -28,6 +28,7 @@ export const projects: Project[] = [
       "React Hook Form", "Zod", "Radix UI",
     ],
     link: "https://venditus.vercel.app",
+    githubFront: "https://github.com/GuilhermeSerafim/venditus",
   },
   {
     id: "geo-risk",
