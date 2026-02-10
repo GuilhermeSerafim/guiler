@@ -15,6 +15,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "venditus",
+    title: "Venditus – Sistema SaaS White-Label para Gestão Empresarial",
+    category: "SaaS: CRM, Financeiro e Multi-Tenancy",
+    date: "2026",
+    image: "/venditus-bg.png",
+    description:
+      "Plataforma completa de gestão para consultoria e educação, com arquitetura multi-tenant e personalização white-label. O sistema integra CRM avançado com funil de vendas, gestão financeira com fluxo de caixa em tempo real, controle de eventos e dashboard executivo.",
+    technologies: [
+      "React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/UI", "Supabase", 
+      "PostgreSQL", "TanStack Query", "React Router", "Tremor", "Recharts", 
+      "React Hook Form", "Zod", "Radix UI",
+    ],
+    link: "https://venditus.vercel.app",
+  },
+  {
     id: "geo-risk",
     title: "GeoRisk – Inteligência Preditiva de Riscos Ambientais",
     category: "GovTech: Plataforma de Análise Geoespacial e IA",
