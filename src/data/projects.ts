@@ -31,6 +31,35 @@ export const projects: Project[] = [
     githubFront: "https://github.com/GuilhermeSerafim/venditus",
   },
   {
+    id: "seven-tools",
+    title: "SEVEN Tools – Hub de Ferramentas Empresariais",
+    category: "Business Tools: Hub de IAs e Recursos Empresariais",
+    date: "2026",
+    image: "/seven-tools-hero.png",
+    description:
+      "Hub exclusivo do ecossistema SEVEN para centralizar IAs, ferramentas e recursos organizados por área de negócio. O projeto combina uma SPA React no frontend com uma API FastAPI no backend, estruturando uma base escalável para entregar utilidades empresariais com experiência fluida e deploy moderno.",
+    technologies: [
+      "React", "TypeScript", "Vite", "Bun", "FastAPI", "Python", "Docker", "PostgreSQL", "Alembic",
+    ],
+    link: "https://seven-tools.vercel.app/",
+    githubFront: "https://github.com/GuilhermeSerafim/seven-tools-front",
+    githubBack: "https://github.com/GuilhermeSerafim/seven-tools-back",
+  },
+  {
+    id: "mesa-de-negocios",
+    title: "Mesa de Negócios – Landing Page de Conversão",
+    category: "Landing Page: Growth, Autoridade e Captação",
+    date: "2026",
+    image: "/mesa-de-negocios-hero.png",
+    description:
+      "Landing page da metodologia Mesa de Negócios do Grupo SEVEN / Grupo Nakamura, criada para comunicar autoridade, gerar intenção comercial e conduzir visitantes para aplicação. A implementação usa React, TypeScript, Tailwind CSS e shadcn/ui, com fluxo de CI/CD e deploy contínuo via Vercel.",
+    technologies: [
+      "React", "TypeScript", "Vite 6", "Tailwind CSS", "Shadcn/UI", "Vercel", "GitHub Actions",
+    ],
+    link: "https://dennisnakamura.com/",
+    githubFront: "https://github.com/GuilhermeSerafim/LP-mesadenegocios",
+  },
+  {
     id: "geo-risk",
     title: "GeoRisk – Inteligência Preditiva de Riscos Ambientais",
     category: "GovTech: Plataforma de Análise Geoespacial e IA",
