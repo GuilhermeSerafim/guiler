@@ -56,7 +56,7 @@ export const projects: Project[] = [
     technologies: [
       "React", "TypeScript", "Vite 6", "Tailwind CSS", "Shadcn/UI", "Vercel", "GitHub Actions",
     ],
-    link: "https://dennisnakamura.com/",
+    link: "https://dennisnakamura.com/mesa-de-negocios",
     githubFront: "https://github.com/GuilhermeSerafim/LP-mesadenegocios",
   },
   {
